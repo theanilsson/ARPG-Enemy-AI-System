@@ -25,6 +25,10 @@ public:
 	// Init stage functions //
 	RangedEnemy() = delete;
 	RangedEnemy(const EnemyType& anEnemyType);
+	RangedEnemy(const RangedEnemy& anOtherEnemy) = delete;
+	RangedEnemy& operator=(const RangedEnemy& anOtherEnemy) = delete;
+	RangedEnemy(RangedEnemy&& anOtherEnemy) = default;
+	RangedEnemy& operator=(RangedEnemy&& anOtherEnemy) = default;
 	~RangedEnemy();
 	void Init() override;
 	void SetAnimatedModel() override;

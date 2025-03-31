@@ -26,6 +26,10 @@ public:
 	// Init stage functions //
 	WeakEnemy() = delete;
 	WeakEnemy(const EnemyType& anEnemyType);
+	WeakEnemy(const WeakEnemy& anOtherEnemy) = delete;
+	WeakEnemy& operator=(const WeakEnemy& anOtherEnemy) = delete;
+	WeakEnemy(WeakEnemy&& anOtherEnemy) = default;
+	WeakEnemy& operator=(WeakEnemy&& anOtherEnemy) = default;
 	~WeakEnemy();
 	void Init() override;
 	void SetAnimatedModel() override;

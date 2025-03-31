@@ -27,6 +27,10 @@ public:
 	// Init stage functions //
 	TankEnemy() = delete;
 	TankEnemy(const EnemyType& anEnemyType);
+	TankEnemy(const TankEnemy& anOtherEnemy) = delete;
+	TankEnemy& operator=(const TankEnemy& anOtherEnemy) = delete;
+	TankEnemy(TankEnemy&& anOtherEnemy) = default;
+	TankEnemy& operator=(TankEnemy&& anOtherEnemy) = default;
 	~TankEnemy();
 	void Init() override;
 	void SetAnimatedModel() override;
